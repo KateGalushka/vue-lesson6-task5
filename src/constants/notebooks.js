@@ -2,6 +2,7 @@ export const notebooksList = [
 	{
 		id: 1,
 		title: 'Ноутбук ASUS TUF Gaming A15 (2023)',
+		brand: 'ASUS',
 		imgSrc:
 			'https://content.rozetka.com.ua/goods/images/original/349586929.jpg',
 		discount: 8000,
@@ -13,6 +14,7 @@ export const notebooksList = [
 	{
 		id: 2,
 		title: 'Ноутбук ASUS TUF Gaming F15 FX506HF-HN038 ...',
+		brand: 'ASUS',
 		imgSrc:
 			'https://content.rozetka.com.ua/goods/images/original/323437245.jpg',
 		discount: 6500,
@@ -24,6 +26,7 @@ export const notebooksList = [
 	{
 		id: 3,
 		title: 'Ноутбук HP Victus Gaming Laptop ...',
+		brand: 'HP',
 		imgSrc:
 			'https://content.rozetka.com.ua/goods/images/original/368225648.jpg',
 		discount: 5000,
@@ -35,6 +38,7 @@ export const notebooksList = [
 	{
 		id: 4,
 		title: 'Ноутбук Lenovo LOQ 15IRH8 Storm Grey...',
+		brand:'Lenovo',
 		imgSrc:
 			'https://content1.rozetka.com.ua/goods/images/big/357696528.jpg',
 		discount: 6000,
@@ -47,17 +51,19 @@ export const notebooksList = [
 	{
 		id: 5,
 		title: 'Ноутбук Acer Aspire 7 A715-43G-R92H',
+		brand: 'Acer',
 		imgSrc:
 			'https://content1.rozetka.com.ua/goods/images/big/354763646.jpg',
 		discount: 7000,
 		oldPrice: 39999,
 		price: 32999,
 		link: 'https://rozetka.com.ua/ua/acer-nhqhheu00g/p389616942/',
-		seller: 'Інші'
+		seller: 'Rozetka'
 	},
 	{
 		id: 6,
 		title: 'Ноутбук Samsung Galaxy Book2 Pro...',
+		brand: 'Samsung',
 		imgSrc:
 			'https://content1.rozetka.com.ua/goods/images/big/363061400.jpg',
 		discount: 8000,

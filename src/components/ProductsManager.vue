@@ -1,7 +1,9 @@
 <template>
 	<div class="container-main">
-		<filter-manager/>
-		<product-panel :cardList="notebooksList"/>
+		<filter-manager 
+			@areCheckedStores="getFilterByStore"
+			@areCheckedBrands="getFilterByBrand"/>
+		<product-panel :card-list="filteredList"/>
 
 	</div>
 </template>
@@ -19,7 +21,40 @@ export default {
 	},
 	data() {
 		return {
-			notebooksList
+			notebooksList,
+			checkedStores: [],
+			checkedBrands: []
+
+		}
+	},
+	computed: {
+		filteredList() {
+			if (this.checkedStores.length == 0 && this.checkedBrands.length == 0) {
+				return this.notebooksList
+			} else {
+				return this.onFilterListData()
+			}
+		}
+	},
+
+	methods: {
+		getFilterByStore(checkedStores) {
+			this.checkedStores = checkedStores;
+			console.log('STORES: ', checkedStores);
+		},
+		getFilterByBrand(checkedBrands){
+			this.checkedBrands = checkedBrands;
+			console.log('bRANDS: ', checkedBrands);
+		},
+		onFilterListData(){
+			return this.notebooksList.filter((notebook) => {
+				// Check if the seller is in the checkedStores array
+				const sellerMatch = !this.checkedStores.length || this.checkedStores.some((store) => store.title === notebook.seller);
+				// Check if the brand is in the checkedBrands array
+				const brandMatch = !this.checkedBrands.length || this.checkedBrands.some((brand) => brand.title.toLowerCase() === notebook.brand.toLowerCase());
+
+				return brandMatch && sellerMatch;
+			});
 		}
 	},
 

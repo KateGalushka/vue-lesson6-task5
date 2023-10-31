@@ -1,4 +1,4 @@
-export const storesNames = [
+export const stores = [
 	{
 		id: 1,
 		title: "Rozetka"
